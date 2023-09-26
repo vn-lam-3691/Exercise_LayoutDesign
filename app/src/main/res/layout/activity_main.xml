@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/background_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/background_11"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/title_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:includeFontPadding="false"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Hello"
+        android:textStyle="bold"
+        android:textSize="64sp"
+        android:textColor="#262626"
+        app:layout_constraintTop_toBottomOf="@id/background_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/title_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:includeFontPadding="false"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Sign in to your account"
+        android:textSize="18sp"
+        android:textColor="#262626"
+        app:layout_constraintTop_toBottomOf="@id/title_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/input_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="45dp"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:paddingTop="13dp"
+        android:paddingBottom="13dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/title_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/background_with_shadow">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_person"
+            app:tint="#262626"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:background="@null"
+            android:inputType="text"
+            android:importantForAutofill="no"
+            android:hint="Username"
+            android:fontFamily="@font/roboto_regular"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:textColorHint="#C8C8C8"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/input_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="45dp"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:paddingTop="13dp"
+        android:paddingBottom="13dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/input_username"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/background_with_shadow">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_lock"
+            app:tint="#262626"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:background="@null"
+            android:inputType="textPassword"
+            android:importantForAutofill="no"
+            android:hint="Username"
+            android:fontFamily="@font/roboto_regular"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:textColorHint="#C8C8C8"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_forgot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="45dp"
+        android:includeFontPadding="false"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Forgot your password?"
+        android:textColor="#BEBEBE"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/input_pass"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/text_sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:includeFontPadding="false"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Sign in"
+        android:textStyle="bold"
+        android:textColor="#262626"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@id/text_forgot"
+        app:layout_constraintEnd_toStartOf="@id/button_signIn"
+        app:layout_constraintBottom_toTopOf="@id/text_dontHave"/>
+
+    <ImageView
+        android:id="@+id/button_signIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="45dp"
+        android:src="@drawable/button_next"
+        app:layout_constraintTop_toTopOf="@id/text_sign"
+        app:layout_constraintBottom_toBottomOf="@id/text_sign"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/text_dontHave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/copyright"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Don't have an account?"
+            android:textSize="15sp"
+            android:textColor="#262626"/>
+
+        <TextView
+            android:id="@+id/text_createNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:includeFontPadding="false"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Create new"
+            android:textSize="15sp"
+            android:textColor="#262626"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/copyright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="45dp"
+        android:includeFontPadding="false"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Copyright by Trương Văn Lâm - 21115053120326"
+        android:textColor="#262626"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
