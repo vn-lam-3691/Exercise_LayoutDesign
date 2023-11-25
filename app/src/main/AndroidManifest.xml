@@ -13,6 +13,9 @@
         android:theme="@style/Theme.SC_Week3_DesignLayout"
         tools:targetApi="31">
         <activity
+            android:name=".LoginFacebookActivity"
+            android:exported="false" />
+        <activity
             android:name=".SignUpActivity"
             android:exported="false" />
         <activity
